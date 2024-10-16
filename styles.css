@@ -1,0 +1,284 @@
+/* Updated style.css based on provided feedback for cohesive styling */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1c1c1e; /* Dark theme background */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out; /* Adding animation for the header */
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff; /* White header text */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #a1a1aa; /* Light grey for description */
+}
+
+/* Section Header Styles */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff; /* White for section titles */
+    text-align: center;
+}
+
+/* Dashboard Section */
+#dashboard {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.dashboard-card {
+    background: #2e3b4e; /* Dark card background */
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 800px;
+    margin: 0 auto 30px auto; /* Center the dashboard container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* White text on dark background */
+    animation: fadeInUp 1.5s ease-in-out; /* Adding animation */
+}
+
+.level-info p {
+    font-size: 1.2rem;
+    color: #adb5bd; /* Light grey for description text */
+    text-align: left;
+}
+
+#xp-bar {
+    background: #394b61; /* Darker grey for XP bar */
+    border-radius: 15px;
+    height: 20px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#xp-bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, #ff9800, #ff5722); /* Gradient fill for XP progress */
+    transition: width 0.5s ease-in-out;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.project-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background: #2e3b4e;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* White text for project details */
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1.5s ease-in-out; /* Adding animation */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #adb5bd;
+}
+
+.project-card button {
+    background: #ff5722;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.project-card button:hover {
+    background: #e64a19;
+}
+
+/* Add Project Button */
+.add-project-btn {
+    background: #d32f2f;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-project-btn:hover {
+    background: #c2185b;
+    transform: scale(1.1);
+}
+
+/* Leaderboard Section */
+#leaderboard {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.leaderboard-container {
+    background: #2e3b4e; /* Dark card background to match dashboard and project cards */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.5s ease-in-out; /* Adding animation */
+}
+
+.leaderboard-title {
+    font-size: 1.2rem;
+    color: #a1a1aa;
+    margin-bottom: 10px;
+}
+
+.leaderboard-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #475569;
+}
+
+.leaderboard-entry:last-child {
+    border-bottom: none;
+}
+
+.rank-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.profile-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffffff; /* White text */
+}
+
+.player-score {
+    font-size: 1rem;
+    color: #adb5bd; /* Grey text color for score */
+}
+
+.rating-stars {
+    font-size: 1.2rem;
+    color: #ffd700; /* Gold color for stars */
+}
+
+.leaderboard-entry:hover {
+    background: #394b61; /* Slightly lighter background on hover */
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #ff9800;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Animations */
+button {
+    font-family: inherit;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* Miscellaneous Styles */
+#xp-bar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #ffffff;
+}
+
+section p {
+    font-size: 1.1rem;
+}
+
+/* Cartoonish Styles */
+svg {
+    fill: #ff9800;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
